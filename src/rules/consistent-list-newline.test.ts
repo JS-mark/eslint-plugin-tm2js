@@ -25,13 +25,11 @@ const valids = [
   'foo(() =>\nbar())',
   'foo(() =>\nbar()\n)',
   `call<{\nfoo: 'bar'\n}>('')`,
-  // https://github.com/antfu/eslint-plugin-antfu/issues/11
   `function fn({ foo, bar }: {\nfoo: 'foo'\nbar: 'bar'\n}) {}`,
   {
     code: 'foo(\na, b\n)',
     options: [{ CallExpression: false }],
   },
-  // https://github.com/antfu/eslint-plugin-antfu/issues/14
   {
     code: `
 const a = (
@@ -49,14 +47,12 @@ const a = (
       },
     },
   },
-  // https://github.com/antfu/eslint-plugin-antfu/issues/15
   `
 export const getTodoList = request.post<
   Params,
   ResponseData,
 >('/api/todo-list')
 `,
-  // https://github.com/antfu/eslint-plugin-antfu/issues/16
   {
     code: `
 function TodoList() {
@@ -115,7 +111,6 @@ const invalid = [
   'const {a,\nb\n} = c',
   'const [\na,b] = c',
   'foo(([\na,b]) => {})',
-  // https://github.com/antfu/eslint-plugin-antfu/issues/14
   {
     code: `
 const a = (

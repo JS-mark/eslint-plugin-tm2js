@@ -1,6 +1,6 @@
-import antfu from '@antfu/eslint-config'
+import tm2js from '@tm2js/eslint-config'
 
-export default antfu(
+export default tm2js(
   {
     ignores: ['vendor'],
   },

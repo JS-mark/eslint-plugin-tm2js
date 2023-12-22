@@ -9,7 +9,7 @@ import consistentListNewline from './rules/consistent-list-newline'
 
 const plugin = {
   meta: {
-    name: 'antfu',
+    name: 'tm2js',
     version,
   },
   rules: {
