@@ -47,7 +47,7 @@
   "devDependencies": {
     "@antfu/ni": "^0.21.12",
     "@antfu/utils": "^0.7.7",
-    "@tm2js/eslint-config": "^0.0.4",
+    "@tm2js/eslint-config": "^0.0.5",
     "@types/eslint": "^8.56.0",
     "@types/lodash.merge": "^4.6.9",
     "@types/node": "^20.10.3",

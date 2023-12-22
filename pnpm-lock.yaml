@@ -18,8 +18,8 @@ importers:
         specifier: ^0.7.7
         version: 0.7.7
       '@tm2js/eslint-config':
-        specifier: ^0.0.4
-        version: 0.0.4(@vue/compiler-sfc@3.3.13)(eslint@8.56.0)(typescript@5.3.3)(vitest@1.1.0)
+        specifier: ^0.0.5
+        version: 0.0.5(@vue/compiler-sfc@3.3.13)(eslint@8.56.0)(typescript@5.3.3)(vitest@1.1.0)
       '@types/eslint':
         specifier: ^8.56.0
         version: 8.56.0
@@ -959,8 +959,8 @@ packages:
       - typescript
     dev: true
 
-  /@tm2js/eslint-config@0.0.4(@vue/compiler-sfc@3.3.13)(eslint@8.56.0)(typescript@5.3.3)(vitest@1.1.0):
-    resolution: {integrity: sha512-pM1eMyD8hWq12yMXYnMjsOdn6A7lMTK8RmRehdv1oiMmAaTwW/Jc8mKpGryeagkPa5VKiBt7jqC9ProuEqg1lQ==}
+  /@tm2js/eslint-config@0.0.5(@vue/compiler-sfc@3.3.13)(eslint@8.56.0)(typescript@5.3.3)(vitest@1.1.0):
+    resolution: {integrity: sha512-x2wBlxbJZ1NUB/eNX3WiuZAZdMccxcMRmu4vaYp/0OE3ThcS/4E/LXvWcu+HNNc7ps/XUWxMypvrSZJKzfBBWg==}
     hasBin: true
     peerDependencies:
       '@unocss/eslint-plugin': '>=0.50.0'
@@ -992,7 +992,6 @@ packages:
       eslint: 8.56.0
       eslint-config-flat-gitignore: 0.1.2
       eslint-merge-processors: 0.1.0(eslint@8.56.0)
-      eslint-plugin-antfu: 2.0.0(eslint@8.56.0)
       eslint-plugin-eslint-comments: 3.2.0(eslint@8.56.0)
       eslint-plugin-i: 2.29.1(@typescript-eslint/parser@6.15.0)(eslint@8.56.0)
       eslint-plugin-jsdoc: 46.9.1(eslint@8.56.0)
@@ -1001,6 +1000,7 @@ packages:
       eslint-plugin-n: 16.5.0(eslint@8.56.0)
       eslint-plugin-no-only-tests: 3.1.0
       eslint-plugin-perfectionist: 2.5.0(eslint@8.56.0)(typescript@5.3.3)(vue-eslint-parser@9.3.2)
+      eslint-plugin-tm2js: 'link:'
       eslint-plugin-toml: 0.8.0(eslint@8.56.0)
       eslint-plugin-unicorn: 49.0.0(eslint@8.56.0)
       eslint-plugin-unused-imports: 3.0.0(@typescript-eslint/eslint-plugin@6.15.0)(eslint@8.56.0)
@@ -2126,14 +2126,6 @@ packages:
       eslint-import-resolver-node: 0.3.9
     transitivePeerDependencies:
       - supports-color
-    dev: true
-
-  /eslint-plugin-antfu@2.0.0(eslint@8.56.0):
-    resolution: {integrity: sha512-jbJqri3bDxZ3Eel//ncXI3NXRNYbY0ckckmaWxk4I+nxR5PorOVyLHu/QL69UaPI7qvqAlI0B9GmlAA3hypoHQ==}
-    peerDependencies:
-      eslint: '*'
-    dependencies:
-      eslint: 8.56.0
     dev: true
 
   /eslint-plugin-es-x@7.5.0(eslint@8.56.0):
