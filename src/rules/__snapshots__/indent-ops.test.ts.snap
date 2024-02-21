@@ -1,21 +1,21 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`indent-ops > invalid > 
-const a = 
+exports[`indent-ops > invalid >
+const a =
 x +
    y * z
  1`] = `
 "
-const a = 
+const a =
 x +
 y * z
 "
 `;
 
-exports[`indent-ops > invalid > 
+exports[`indent-ops > invalid >
 function foo() {
-  if (a 
-  || b 
+  if (a
+  || b
       || c || d
         || (d && b)
   ) {
@@ -25,8 +25,8 @@ function foo() {
  1`] = `
 "
 function foo() {
-  if (a 
-  || b 
+  if (a
+  || b
   || c || d
   || (d && b)
   ) {
@@ -36,7 +36,7 @@ function foo() {
 "
 `;
 
-exports[`indent-ops > invalid > 
+exports[`indent-ops > invalid >
 if (
   a && (
     a.b ||
@@ -56,7 +56,7 @@ if (
 "
 `;
 
-exports[`indent-ops > invalid > 
+exports[`indent-ops > invalid >
 if (
   aaaaaa >
 bbbbb

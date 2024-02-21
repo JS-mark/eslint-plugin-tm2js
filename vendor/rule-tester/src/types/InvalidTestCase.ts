@@ -67,7 +67,7 @@ export interface InvalidTestCase<
 > extends ValidTestCase<TOptions> {
   /**
    * Expected errors.
-   * 
+   *
    * Can be `null` to bypass the assertion.
    */
   readonly errors: readonly TestCaseError<TMessageIds>[] | null

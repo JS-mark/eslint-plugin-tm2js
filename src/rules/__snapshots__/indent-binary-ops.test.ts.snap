@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`indent-binary-ops > invalid > 
+exports[`indent-binary-ops > invalid >
   function isNamedFunction(node:
   | Tree.ArrowFunctionExpression
   | Tree.FunctionDeclaration
@@ -44,7 +44,7 @@ exports[`indent-binary-ops > invalid >
 "
 `;
 
-exports[`indent-binary-ops > invalid > 
+exports[`indent-binary-ops > invalid >
 const a =
 x +
    y * z
@@ -56,7 +56,7 @@ y * z
 "
 `;
 
-exports[`indent-binary-ops > invalid > 
+exports[`indent-binary-ops > invalid >
 function foo() {
   if (a
   || b
@@ -80,7 +80,7 @@ function foo() {
 "
 `;
 
-exports[`indent-binary-ops > invalid > 
+exports[`indent-binary-ops > invalid >
 if (
   a && (
     a.b ||
@@ -100,7 +100,7 @@ if (
 "
 `;
 
-exports[`indent-binary-ops > invalid > 
+exports[`indent-binary-ops > invalid >
 if (
   aaaaaa >
 bbbbb
@@ -114,47 +114,47 @@ if (
 "
 `;
 
-exports[`indent-binary-ops > invalid > 
+exports[`indent-binary-ops > invalid >
 type Foo = Merge<
-    A 
+    A
   & B
     & C
 > 1`] = `
 "
 type Foo = Merge<
-  A 
+  A
   & B
   & C
 >"
 `;
 
-exports[`indent-binary-ops > invalid >  
+exports[`indent-binary-ops > invalid >
 function TSPropertySignatureToProperty(
-  node: 
+  node:
   | TSESTree.TSEnumMember
     | TSESTree.TSPropertySignature
   | TSESTree.TypeElement,
-  type: 
+  type:
   | AST_NODE_TYPES.Property
     | AST_NODE_TYPES.PropertyDefinition = AST_NODE_TYPES.Property,
 ): TSESTree.Node | null {} 1`] = `
-" 
+"
 function TSPropertySignatureToProperty(
-  node: 
+  node:
     | TSESTree.TSEnumMember
     | TSESTree.TSPropertySignature
     | TSESTree.TypeElement,
-  type: 
+  type:
     | AST_NODE_TYPES.Property
     | AST_NODE_TYPES.PropertyDefinition = AST_NODE_TYPES.Property,
 ): TSESTree.Node | null {}"
 `;
 
-exports[`indent-binary-ops > invalid > type Foo = 
+exports[`indent-binary-ops > invalid > type Foo =
   | A | C
     | B
  1`] = `
-"type Foo = 
+"type Foo =
   | A | C
   | B
 "
@@ -180,12 +180,12 @@ exports[`indent-binary-ops > invalid > type T =
   | D)"
 `;
 
-exports[`indent-binary-ops > invalid > type T = 
-  a 
-  | b 
+exports[`indent-binary-ops > invalid > type T =
+  a
+  | b
     | c 1`] = `
-"type T = 
-  a 
-  | b 
+"type T =
+  a
+  | b
   | c"
 `;

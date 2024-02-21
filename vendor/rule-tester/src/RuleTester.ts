@@ -211,8 +211,8 @@ export class RuleTester extends TestFramework {
       | InvalidTestCase<TMessageIds, TOptions>
       | ValidTestCase<TOptions>,
     >(
-        test: T,
-      ): T => {
+      test: T,
+    ): T => {
       if (test.parser === TYPESCRIPT_ESLINT_PARSER)
         throw new Error(DUPLICATE_PARSER_ERROR_MESSAGE)
 
@@ -285,8 +285,8 @@ export class RuleTester extends TestFramework {
       | InvalidTestCase<TMessageIds, TOptions>
       | ValidTestCase<TOptions>,
     >(
-        test: T,
-      ): T => {
+      test: T,
+    ): T => {
       return {
         ...test,
         skip: !satisfiesAllDependencyConstraints(test.dependencyConstraints),
@@ -439,11 +439,11 @@ export class RuleTester extends TestFramework {
     rule: RuleModule<TMessageIds, TOptions>,
     item: InvalidTestCase<TMessageIds, TOptions> | ValidTestCase<TOptions>,
   ): {
-      messages: Linter.LintMessage[]
-      output: string
-      beforeAST: TSESTree.Program
-      afterAST: TSESTree.Program
-    } {
+    messages: Linter.LintMessage[]
+    output: string
+    beforeAST: TSESTree.Program
+    afterAST: TSESTree.Program
+  } {
     let config: TesterConfigWithDefaults = merge({}, this.#testerConfig)
     let code
     let filename
@@ -694,8 +694,8 @@ export class RuleTester extends TestFramework {
       = hasOwnProperty(rule, 'meta') && hasOwnProperty(rule.meta, 'messages')
     const friendlyIDList = ruleHasMetaMessages
       ? `[${Object.keys(rule.meta.messages)
-          .map(key => `'${key}'`)
-          .join(', ')}]`
+        .map(key => `'${key}'`)
+        .join(', ')}]`
       : null
 
     const result = this.runRuleForItem(ruleName, rule, item)
@@ -894,7 +894,7 @@ export class RuleTester extends TestFramework {
               error.suggestions.forEach((expectedSuggestion, index) => {
                 assert.ok(
                   typeof expectedSuggestion === 'object'
-                    && expectedSuggestion != null,
+                  && expectedSuggestion != null,
                   'Test suggestion in \'suggestions\' array must be an object.',
                 )
                 Object.keys(expectedSuggestion).forEach((propertyName) => {

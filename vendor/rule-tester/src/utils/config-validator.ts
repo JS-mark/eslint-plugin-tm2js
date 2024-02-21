@@ -111,9 +111,8 @@ function validateRuleOptions(
       validateRuleSchema(rule, Array.isArray(options) ? options.slice(1) : [])
   }
   catch (err) {
-    const enhancedMessage = `Configuration for rule "${ruleId}" is invalid:\n${
-      (err as Error).message
-    }`
+    const enhancedMessage = `Configuration for rule "${ruleId}" is invalid:\n${(err as Error).message
+      }`
 
     if (typeof source === 'string')
       throw new Error(`${source}:\n\t${enhancedMessage}`)
@@ -189,8 +188,7 @@ function validateGlobals(
       }
       catch (err) {
         throw new Error(
-          `ESLint configuration of global '${configuredGlobal}' in ${source} is invalid:\n${
-            (err as Error).message
+          `ESLint configuration of global '${configuredGlobal}' in ${source} is invalid:\n${(err as Error).message
           }`,
         )
       }

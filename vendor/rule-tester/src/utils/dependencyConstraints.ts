@@ -16,8 +16,8 @@ function satisfiesDependencyConstraint(
   const constraint: SemverVersionConstraint
     = typeof constraintIn === 'string'
       ? {
-          range: `>=${constraintIn}`,
-        }
+        range: `>=${constraintIn}`,
+      }
       : constraintIn
 
   return semver.satisfies(

@@ -25,11 +25,20 @@ const valids = [
   'foo(() =>\nbar())',
   'foo(() =>\nbar()\n)',
   `call<{\nfoo: 'bar'\n}>('')`,
+  `
+(Object.keys(options) as KeysOptions[])
+.forEach((key) => {
+  if (options[key] === false)
+    delete listenser[key]
+})
+  `,
+  // https://github.com/antfu/eslint-plugin-antfu/issues/11
   `function fn({ foo, bar }: {\nfoo: 'foo'\nbar: 'bar'\n}) {}`,
   {
     code: 'foo(\na, b\n)',
     options: [{ CallExpression: false }],
   },
+  // https://github.com/antfu/eslint-plugin-antfu/issues/14
   {
     code: `
 const a = (
@@ -47,12 +56,14 @@ const a = (
       },
     },
   },
+  // https://github.com/antfu/eslint-plugin-antfu/issues/15
   `
 export const getTodoList = request.post<
   Params,
   ResponseData,
 >('/api/todo-list')
 `,
+  // https://github.com/antfu/eslint-plugin-antfu/issues/16
   {
     code: `
 function TodoList() {
@@ -82,6 +93,15 @@ bar(
     : ''
 )
   `,
+  // https://github.com/antfu/eslint-plugin-antfu/issues/19
+  `
+const a = [
+  (1),
+  (2)
+];
+  `,
+  `const a = [(1), (2)];`,
+
 ]
 
 // Check snapshot for fixed code
@@ -111,6 +131,7 @@ const invalid = [
   'const {a,\nb\n} = c',
   'const [\na,b] = c',
   'foo(([\na,b]) => {})',
+  // https://github.com/antfu/eslint-plugin-antfu/issues/14
   {
     code: `
 const a = (
@@ -129,11 +150,39 @@ const a = (
       },
     },
   },
-] as const
+  // https://github.com/antfu/eslint-plugin-antfu/issues/18
+  `
+export default antfu({
+},
+{
+  foo: 'bar'
+}
+  // some comment
+  // hello
+)`,
+  // https://github.com/antfu/eslint-plugin-antfu/issues/18
+  `
+export default antfu({
+},
+// some comment
+{
+  foo: 'bar'
+},
+{
+}
+  // hello
+)`,
+]
 
 const ruleTester: RuleTester = new RuleTester({
   parser: require.resolve('@typescript-eslint/parser'),
 })
+
+// For debugging
+// valids.length = 0
+// const last = invalid[invalid.length - 1]
+// invalid.length = 0
+// invalid.push(last)
 
 ruleTester.run(RULE_NAME, rule as any, {
   valid: valids,
